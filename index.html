@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"></link>
+    <title>portfolio website</title> 
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="portfolio logo.png" class="logo" />
+                <ul>
+                    <li><a href="#header" >Home</a></li>
+                    <li><a href="#about" >About</a></li>
+                    <li><a href="#portfolio" >portfolio</a></li>
+                    <li><a href="#contact" >Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi,i'm  <span>Mohan</span> </br> Kapakayala</h1>
+            </div>
+        </div>
+        
+    </div> 
+    
+    <!--------about-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.jpg" >
+
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Highly motivated and skilled Front End Developer seeking an entry-level position to utilize my technical expertise and passion for creating innovative and user-friendly web applications.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links " onclick="opentab('education')">Education</p>
+                        <p class="tab-links " onclick="opentab('experience')">Experience</p>
+
+                    </div>
+                    <div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li>Python</li>
+                                <li>Dbms</li>
+                                <li>My Sql</li>
+                                <li>Html5</li>
+                                <li>Css3</li>
+                                <li>Javascript</li>
+                                <li>ReactJs</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2019-2023</span><br>Completed BTech from ANITS,vizag with a cgpa of 8.03</li>
+                                <li><span>2017-2019</span><br>Completed intermediate from Sasi junior college,Tanuku with a cgpa of 10</li>
+                                <li><span>2016-2017</span><br>Completed Schooling  from Sasi English Medium School,Tanuku with a cgpa of 10</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Fresher</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------work------------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work1.jpg"></img>
+                <div class="layer" >
+                    <h3>Remainder App with Notification</h3>
+                    <p>This  App remainds the user to do a particular task.</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work1.jpg"></img>
+                <div class="layer" >
+                    <h3>Keeper website using Reactjs</h3>
+                    <p>This is a responsive website which is used to keep note of daily or important tasks to bo done by the user.</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    
+                </div>
+            </div>
+            <div class="work">
+                <img src="work1.jpg"></img>
+                <div class="layer" >
+                    <h3>Portfolio using html,css,js</h3>
+                    <p>This portfolio contains My education,skills,experience,projects i have done and my contact information.</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!------------contact---------------------------------------------------------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>Email-  mohansainarayana31@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>phone- 8247558183</p>
+                <button><a href="images/Mohan_Kapakayala_Resume_07-07-2023-13-17-14.pdf" download class="btn btn2" >Download CV</a></button>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                        <input type="text" name="Name" placeholder="Enter your name" required></input>
+                        <input type="text" name="Email" placeholder="Enter your Email" required></input>
+                        <textarea name="Message" rows="6" placeholder="Enter your message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+<div class="copy-right">
+    <p>Copyright © Mohan made with 🖤 by Easy Tutorials </p>
+
+</div>
+
+</div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
+
